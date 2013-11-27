@@ -44,8 +44,6 @@ namespace CreateRequest.Subscribers.Startables
             };
 
             autoSubscriber.Subscribe(Assembly.GetExecutingAssembly());
-
-            _bus.Respond<TestRequest, TestResponse>(r => new TestResponse { Response = " ***** Response to Request *****" });
         }
 
         public void Stop()
